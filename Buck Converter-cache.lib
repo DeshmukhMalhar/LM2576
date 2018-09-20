@@ -1,11 +1,11 @@
-EESchema-LIBRARY Version 2.3
+EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# CP
+# Device:CP
 #
-DEF CP C 0 10 N Y 1 F N
+DEF Device:CP C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "CP" 25 -100 50 H V L CNN
+F1 "Device:CP" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -24,16 +24,15 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# D_Schottky
+# Device:D_Schottky
 #
-DEF D_Schottky D 0 40 N N 1 F N
+DEF Device:D_Schottky D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "D_Schottky" 0 -100 50 H V C CNN
+F1 "Device:D_Schottky" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
  TO-???*
- *SingleDiode
  *_Diode_*
  *SingleDiode*
  D_*
@@ -47,45 +46,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# GND
+# Device:L_Core_Ferrite
 #
-DEF GND #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "GND" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# LM2576S-12
-#
-DEF LM2576S-12 U 0 40 Y Y 1 F N
-F0 "U" -400 350 50 H V L CNN
-F1 "LM2576S-12" -400 250 50 H V L CNN
-F2 "TO_SOT_Packages_SMD:TO-263-5Lead" 300 -250 50 H I C CIN
-F3 "" 0 0 50 H I C CNN
-ALIAS LM2576S-3.3 LM2576S-5 LM2576S-15 LM2576S-ADJ LM2575BU-ADJ LM2575-3.3BU LM2575-5.0BU LM2575-12BU
-$FPLIST
- TO?263*
-$ENDFPLIST
-DRAW
-S -400 200 400 -200 0 1 10 f
-X VIN 1 -500 100 100 R 50 50 1 1 W
-X OUT 2 500 -100 100 L 50 50 1 1 O
-X GND 3 0 -300 100 U 50 50 1 1 W
-X FB 4 500 100 100 L 50 50 1 1 I
-X ~ON~/OFF 5 -500 -100 100 R 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
-# L_Core_Ferrite
-#
-DEF L_Core_Ferrite L 0 40 N N 1 F N
+DEF Device:L_Core_Ferrite L 0 40 N N 1 F N
 F0 "L" -50 0 50 V V C CNN
-F1 "L_Core_Ferrite" 110 0 50 V V C CNN
+F1 "Device:L_Core_Ferrite" 110 0 50 V V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -116,35 +81,14 @@ X 2 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# POT
+# Device:R
 #
-DEF POT RV 0 40 N N 1 F N
-F0 "RV" -175 0 50 V V C CNN
-F1 "POT" -100 0 50 V V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Potentiometer*
-$ENDFPLIST
-DRAW
-S 40 100 -40 -100 0 1 10 N
-P 2 0 1 0 100 0 60 0 N
-P 3 0 1 0 45 0 90 20 90 -20 F
-X 1 1 0 150 50 D 50 50 1 1 P
-X 2 2 150 0 50 L 50 50 1 1 P
-X 3 3 0 -150 50 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# R
-#
-DEF R R 0 0 N Y 1 F N
+DEF Device:R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "R" 0 0 50 V V C CNN
+F1 "Device:R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- R_*
  R_*
 $ENDFPLIST
 DRAW
@@ -154,35 +98,24 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Screw_Terminal_01x02
+# power:GND
 #
-DEF Screw_Terminal_01x02 J 0 40 Y N 1 F N
-F0 "J" 0 100 50 H V C CNN
-F1 "Screw_Terminal_01x02" 0 -200 50 H V C CNN
+DEF power:GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power:GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
-$FPLIST
- Connector*Terminal*Block*:*
- TerminalBlock*
-$ENDFPLIST
 DRAW
-C 0 -100 25 1 1 6 N
-C 0 0 25 1 1 6 N
-S -50 50 50 -150 1 1 10 f
-P 2 1 1 6 -21 -87 13 -120 N
-P 2 1 1 6 -21 13 13 -20 N
-P 2 1 1 6 -14 -80 20 -113 N
-P 2 1 1 6 -14 20 20 -13 N
-X Pin_1 1 -200 0 150 R 50 50 1 1 P
-X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# VCC
+# power:VCC
 #
-DEF VCC #PWR 0 0 Y Y 1 F P
+DEF power:VCC #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "VCC" 0 150 50 H V C CNN
+F1 "power:VCC" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
