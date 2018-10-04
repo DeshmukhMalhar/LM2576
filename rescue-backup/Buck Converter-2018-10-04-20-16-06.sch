@@ -1,6 +1,39 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:dc-dc
 LIBS:Buck Converter-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,18 +48,18 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L dc-dc:LM2576S-ADJ U1
+L LM2576S-ADJ U1
 U 1 1 5ACE2AA2
 P 3850 2400
 F 0 "U1" H 3450 2750 50  0000 L CNN
 F 1 "LM2576S-ADJ" H 3450 2650 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-5_Vertical" H 4150 2150 50  0001 C CIN
+F 2 "TO_SOT_Packages_SMD:TO-263-5_TabPin3" H 4150 2150 50  0001 C CIN
 F 3 "" H 3850 2400 50  0001 C CNN
 	1    3850 2400
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR01
+L VCC #PWR01
 U 1 1 5ACE2AF9
 P 3250 2250
 F 0 "#PWR01" H 3250 2100 50  0001 C CNN
@@ -41,7 +74,7 @@ Wire Wire Line
 Wire Wire Line
 	3250 2300 3250 2250
 $Comp
-L power:GND #PWR02
+L GND #PWR02
 U 1 1 5ACE2B23
 P 3300 2550
 F 0 "#PWR02" H 3300 2300 50  0001 C CNN
@@ -56,7 +89,7 @@ Wire Wire Line
 Wire Wire Line
 	3300 2500 3300 2550
 $Comp
-L power:GND #PWR03
+L GND #PWR03
 U 1 1 5ACE2B3E
 P 3850 2700
 F 0 "#PWR03" H 3850 2450 50  0001 C CNN
@@ -67,7 +100,7 @@ F 3 "" H 3850 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L_Core_Ferrite L1
+L L_Core_Ferrite L1
 U 1 1 5ACE2B78
 P 4750 2500
 F 0 "L1" V 4700 2500 50  0000 C CNN
@@ -78,9 +111,9 @@ F 3 "" H 4750 2500 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	4350 2500 4450 2500
+	4350 2500 4600 2500
 $Comp
-L Device:D_Schottky D1
+L D_Schottky D1
 U 1 1 5ACE2BE6
 P 4450 2750
 F 0 "D1" H 4450 2850 50  0000 C CNN
@@ -94,7 +127,7 @@ Wire Wire Line
 	4450 2600 4450 2500
 Connection ~ 4450 2500
 $Comp
-L Device:CP C2
+L CP C2
 U 1 1 5ACE2C4B
 P 5000 2700
 F 0 "C2" H 5025 2800 50  0000 L CNN
@@ -105,7 +138,7 @@ F 3 "" H 5000 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP C3
+L CP C3
 U 1 1 5ACE2C74
 P 5250 2700
 F 0 "C3" H 5275 2800 50  0000 L CNN
@@ -121,7 +154,7 @@ Wire Wire Line
 	5000 2550 5000 2500
 Connection ~ 5000 2500
 $Comp
-L power:GND #PWR04
+L GND #PWR04
 U 1 1 5ACE2CB6
 P 4450 2900
 F 0 "#PWR04" H 4450 2650 50  0001 C CNN
@@ -132,7 +165,7 @@ F 3 "" H 4450 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR05
+L GND #PWR05
 U 1 1 5ACE2CD0
 P 5000 2850
 F 0 "#PWR05" H 5000 2600 50  0001 C CNN
@@ -143,7 +176,7 @@ F 3 "" H 5000 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR06
+L GND #PWR06
 U 1 1 5ACE2CEA
 P 5250 2850
 F 0 "#PWR06" H 5250 2600 50  0001 C CNN
@@ -154,7 +187,7 @@ F 3 "" H 5250 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Buck-Converter-rescue:POT RV1
+L POT RV1
 U 1 1 5ACE2D0B
 P 5900 2700
 F 0 "RV1" V 5725 2700 50  0000 C CNN
@@ -166,7 +199,7 @@ F 3 "" H 5900 2700 50  0001 C CNN
 $EndComp
 Connection ~ 5250 2500
 $Comp
-L power:GND #PWR07
+L GND #PWR07
 U 1 1 5ACE2DDD
 P 5900 2850
 F 0 "#PWR07" H 5900 2600 50  0001 C CNN
@@ -177,7 +210,7 @@ F 3 "" H 5900 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R1
+L R R1
 U 1 1 5ACE2F19
 P 5500 2650
 F 0 "R1" V 5580 2650 50  0000 C CNN
@@ -192,16 +225,16 @@ Wire Wire Line
 Wire Wire Line
 	5500 2850 5700 2850
 Wire Wire Line
-	5700 2850 5700 2700
+	5700 2850 5700 2500
 Wire Wire Line
 	5700 2700 5750 2700
 Wire Wire Line
-	5900 2300 5900 2500
+	5900 2300 5900 2550
 Wire Wire Line
 	5700 2500 5900 2500
 Connection ~ 5700 2700
 Wire Wire Line
-	4900 2500 5000 2500
+	4900 2500 5500 2500
 Wire Wire Line
 	4350 2300 5900 2300
 Connection ~ 5900 2500
@@ -209,7 +242,7 @@ Wire Wire Line
 	5500 2500 5500 2450
 Connection ~ 5500 2500
 $Comp
-L conn:Screw_Terminal_01x02 J2
+L Screw_Terminal_01x02 J2
 U 1 1 5ACE30F6
 P 6600 2550
 F 0 "J2" H 6600 2650 50  0000 C CNN
@@ -224,7 +257,7 @@ VOUT
 Text Label 6400 2550 2    60   ~ 0
 VOUT
 $Comp
-L power:GND #PWR08
+L GND #PWR08
 U 1 1 5ACE3155
 P 6350 2700
 F 0 "#PWR08" H 6350 2450 50  0001 C CNN
@@ -239,7 +272,7 @@ Wire Wire Line
 Wire Wire Line
 	6350 2650 6350 2700
 $Comp
-L conn:Screw_Terminal_01x02 J1
+L Screw_Terminal_01x02 J1
 U 1 1 5ACE3278
 P 3100 2350
 F 0 "J1" H 3100 2450 50  0000 C CNN
@@ -250,7 +283,7 @@ F 3 "" H 3100 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR09
+L VCC #PWR09
 U 1 1 5ACE338A
 P 2900 2350
 F 0 "#PWR09" H 2900 2200 50  0001 C CNN
@@ -261,7 +294,7 @@ F 3 "" H 2900 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR010
+L GND #PWR010
 U 1 1 5ACE33B0
 P 2900 2450
 F 0 "#PWR010" H 2900 2200 50  0001 C CNN
@@ -272,7 +305,7 @@ F 3 "" H 2900 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP C1
+L CP C1
 U 1 1 5ACE3442
 P 2650 2400
 F 0 "C1" H 2675 2500 50  0000 L CNN
@@ -283,7 +316,7 @@ F 3 "" H 2650 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR011
+L VCC #PWR011
 U 1 1 5ACE34E2
 P 2650 2250
 F 0 "#PWR011" H 2650 2100 50  0001 C CNN
@@ -294,7 +327,7 @@ F 3 "" H 2650 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR012
+L GND #PWR012
 U 1 1 5ACE350B
 P 2650 2550
 F 0 "#PWR012" H 2650 2300 50  0001 C CNN
@@ -304,14 +337,4 @@ F 3 "" H 2650 2550 50  0001 C CNN
 	1    2650 2550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4450 2500 4600 2500
-Wire Wire Line
-	5000 2500 5250 2500
-Wire Wire Line
-	5250 2500 5500 2500
-Wire Wire Line
-	5700 2700 5700 2500
-Wire Wire Line
-	5900 2500 5900 2550
 $EndSCHEMATC
